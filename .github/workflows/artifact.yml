@@ -26,6 +26,9 @@ jobs:
     steps:
     - name: download artifact
       uses: actions/download-artifact@v4
+      with:
+         name: hello-artifact
+         path: ./artifacts
     - name: display contents of artifact
       run:  |
          ls -l ./artifacts
